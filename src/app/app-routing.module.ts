@@ -8,12 +8,13 @@ import { EditClientComponent } from "./components/edit-client/edit-client.compon
 import { ClientDetailsComponent } from "./components/client-details/client-details.component";
 import { SettingsComponent } from "./components/settings/settings.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
+
 import { AuthGuard } from "./guards/auth.guard";
 
 const app_routes: Routes = [
   { path: "", component: DashboardComponent, canActivate: [AuthGuard] },
   { path: "register", component: RegisterComponent },
-  { path: "login", component: LoginComponent, canActivate: [AuthGuard] },
+  { path: "login", component: LoginComponent },
   {
     path: "client/add",
     component: AddClientComponent,
