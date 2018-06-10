@@ -65,7 +65,7 @@
       <div class="form-group">
         <label for="balance">Balance</label>
         <input type="text" class="form-control" name="balance" #clientBalance="ngModel" [ngClass]="{'is-invalid':clientBalance.errors && clientBalance.touched}"
-          [(ngModel)]="client.balance" [disabled]="disableBalanceOnAdd">
+          [(ngModel)]="client.balance" [disabled]="disableBalanceonEdit">
       </div>
 
       <input type="submit" value="Submit" class="btn btn-primary btn-block">
